@@ -1,0 +1,18 @@
+Step One: Updating the Kernel ==>
+
+
+*   The first step is to change where our Pi updates from, by editing a text file. We need to open up the file /etc/apt/sources.list.d/raspi.list as root,
+    so type:
+      sudo leafpad /etc/apt/sources.list.d/raspi.list
+      
+*  Now change the line in this file so that it reads "deb http://archive.raspberrypi.org/debian/ wheezy main untested", then save and close the file.
+ 
+*  Next, do the following commands:
+       apt-get update
+       apt-get upgrade
+
+Kernel Updates:
+
+    What we are doing here is making the Pi updte itself using the very latest kernel. The kernel is the lowest level bit of software, that makes the connection between the actual hardware, and all the other software that can run. Once the Pi knows it can update itself from this brand new place, we upgrade the kernel. This new kernel has all the extra code it needs to access the temperature sensor we will be using.
+    
+    
